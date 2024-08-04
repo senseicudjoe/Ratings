@@ -9,6 +9,7 @@ In response to the growing popularity of online shopping, we've developed a plat
 - Converts text reviews into numerical ratings
 - Utilizes a custom DistilBERT model for natural language processing
 - Implements multi-class classification for accurate rating prediction
+- The application interface runs on Django with an added application of a DBMS, SQLite.
 
 ## Requirements
 
@@ -47,10 +48,6 @@ To see a demonstration of how this application works, please watch our video tut
 
 [YouTube Link to Your Demo Video]
 
-## Contributing
-
-[Instructions for how others can contribute to your project, if applicable]
-
 ## License
 
 [Specify the license under which your project is released]
@@ -58,6 +55,7 @@ To see a demonstration of how this application works, please watch our video tut
 ## Contact
 
 Baaba O. Amosah - baaba.amosah@gmail.com/baaba.amosah@ashesi.edu.gh
+
 Kevin K. Cudjoe - kevin13cudjoe@gmail.com/kevin.cudjoe@ashesi.edu.gh
 
-Project Link: [https://github.com/[your-username]/[your-repo-name]]
+Project Link: https://github.com/senseicudjoe/Ratings.git
