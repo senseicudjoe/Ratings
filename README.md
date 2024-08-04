@@ -30,13 +30,64 @@ In response to the growing popularity of online shopping, we've developed a plat
 
 ## Hosting the Application
 
-### Local Hosting
+#### Deployment on PythonAnywhere
 
-1. [Provide steps to set up and run the application on a local server]
+To deploy this application on PythonAnywhere, follow these steps:
 
-### Cloud Hosting
+1. If you haven't already, Sign up for a PythonAnywhere account at https://www.pythonanywhere.com.
+2. Log in to your PythonAnywhere dashboard.
+3. Open a Bash console from the dashboard.
 
-1. [Provide steps to deploy the application on a cloud platform (e.g., AWS, Google Cloud, Heroku)]
+5. Clone this repository
+```
+git clone https://github.com/senseicudjoe/Ratings.git
+```
+
+6. Create a virtual environment
+```
+python -m venv env
+```
+
+8. Activate the virtual environment: Powershell (env/Scripts/Activate.ps1)
+  
+10. Navigate to your project directory: cd [repo-name]
+11. Install the requirements
+```
+pip install -r requirements.txt
+```
+
+13. Go to the "Web" tab in the PythonAnywhere dashboard and click on "Add a new web app".
+14. Choose "Manual configuration" and select the Python version that matches your virtual environment.
+    
+16. Set the path to your virtual environment when prompted. It should be something like:
+ ```
+ /home/[your-pythonanywhere-username]/.virtualenvs/myenv
+ ```
+
+12. Set your working directory to:
+ ```
+ /home/[your-pythonanywhere-username]/[your-repo-name]
+ ```
+
+13. Modify the WSGI configuration file (there will be a link to edit it in the Web tab). 
+ Replace the contents with:
+
+ ```python
+ import sys
+ path = '/home/[your-pythonanywhere-username]/[your-repo-name]'
+ if path not in sys.path:
+     sys.path.append(path)
+ 
+ from [your_main_app_file] import app as application
+ ```
+
+ Replace `[your_main_app_file]` with the name of your main application file (without the .py extension).
+
+14. Go back to the Web tab and hit the Reload button for your domain.
+
+Your application should now be live at your PythonAnywhere URL (usually `[your-username].pythonanywhere.com`).
+
+Note: Make sure your application is set up to use environment variables for any sensitive information like secret keys or database credentials. PythonAnywhere allows you to set environment variables in the Web tab.
 
 ## Project Structure
 
