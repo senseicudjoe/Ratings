@@ -13,10 +13,10 @@ In response to the growing popularity of online shopping, we've developed a plat
 
 ## Requirements
 
-- Python 3.7+
+- python 3.7+
 - torch==2.3.1
-- Transformers==4.42.4
-- Django==5.0.7
+- transformers==4.42.4
+- django==5.0.7
 
 ## Installation
 
